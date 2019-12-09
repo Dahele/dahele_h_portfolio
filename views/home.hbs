@@ -1,0 +1,96 @@
+<section id="section1" class="panel">
+    <nav class="mainNav">
+        <ul id="expanded">
+        <a href="index.html">HOME</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="contact.html">CONATCT</a>
+        </ul>
+    </nav>
+        {{!-- <div class="bio-info">
+            {{!-- <h2 class="p-name">Portfolio</h2> --}}
+            {{!-- <p class="introText">I'M HARWINDER DAHELE <br> DESIGNER AND WEB DEVELOPER</p> --}}
+        </div> --}}
+</section>
+<section id="section3" class="panel">
+    <div class="mainImg">
+        {{#each people}}
+        <div class="user-panel">
+            <img src="images/{{image}}" alt="image" class="u-image">        
+            {{!-- <a href="{{ID}}" class="u-link">
+                See More Info
+            </a> --}}
+            <h1 class="u-name">
+                I'M <br> HARWINDER <br>DAHELE
+            </h1>
+            <h3 class="u-description">DESIGNER AND WEB DEVELOPER</h3>
+            <h1>{{Name}}</h1>
+            <h3>{{Category}}</h3>
+        </div>
+        {{/each}}       
+    </div>
+    <section id="about" class="panel">
+        <h2 class="heading">A LITTLE ABOUT ME</h2>
+        <p class="bio">The things I like most to do in my regular basis is that
+        I prefer to make new design regarding different things 
+        which are based  on new  technology.I also 
+        love to cook diferent dishes as depends on 
+        new taste which gives me great experience 
+        about new tasted food. And I like to photoshoot, 
+        wherever I visit new sports I try to capture 
+        those moments.</p>
+    </section>
+    <section id="interest">
+        <h2 class="interest">INTEREST</h2>
+        <img src="images/{{image}}" alt="image" class="u-image">
+        <h2 class="designHead">DESIGN</h2>
+            <p class="designDec">I prefer to make unique design which makes my skills advance.</p>
+
+            <img src="images/{{image}}" alt="image" class="u-image">
+        <h2 class="videoHead">VIDEO EDITING</h2>
+            <p class="videoDec">I like to edit videos on new ideas by using cinema 4D and after effects.</p>
+
+            <img src="images/{{image}}" alt="image" class="u-image">
+        <h2 class="codeHead">CODE</h2>
+            <p class="codeDec">I like to do code for making different type of animation on web page.</p>
+    </section>
+
+
+    <section id="myWork">
+        <h2 class="workHead">MY RECENT PROJECTS</h2>
+    </section>
+
+    <section id="reel">
+        <h2 class="reel">SHOWREEL</h2>
+        <p class="reelDec">This is my show reel which shows my recent works which I have done. This video has made by using after effects and cinema 4D. </p>
+        <video class="video" src="video/video.mp4"></video>
+    </section>
+{{!-- 
+    <section id="contact">
+        <h2 class="contact">CONTACT</h2>
+        <label for="name">NAME:</label>
+        <input type="text" id="name" placeholder="Your Name.."><br>
+        <label for="email">EMAIL:</label>
+        <input type="text" id="email" placeholder="Your Email.."><br>
+        <label for="subject">SUBJECT:</label>
+        <input type="text" id="subject" placeholder="Subject"><br>
+        <label for="message">MESSAGE:</label>
+        <textarea name="message" id="message" placeholder="Type Your Message..."></textarea><br>
+        <button class="submit">SUBMIT</button>
+    </section> --}}
+
+    <div class="socialMedia">
+        <img src="public/images/facebook.png" alt="Facebook">
+        <img src="public/images/instagram.png" alt="Instagram">
+        <img src="public/images/youtube.png" alt="Youtube">
+    </div>
+
+    <footer id="allRights">All Rights Reseved@2019 by Harwinder</footer>
+    <section class="lightbox">
+        <span class="close">x</span>
+        <div class="sidebar">
+            <img src="" alt="larger bio image">
+        </div>
+        <div class="lb-content">
+        </div>
+    </section>
+</section>
