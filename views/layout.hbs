@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Harwinder</title>
+</head>
+<main class="container">
+<body>   
+        <img src="images/logo.svg" alt="Logo" class="logo">
+    <main>
+        {{{ body }}}
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+    <script>
+        var name = "harwinder";
+
+        console.log('name in main file: ' + name);
+    </script>
+
+    <!-- templates -> these don't get rendered immediately -->
+    <template id="user-template">
+        <!-- you can put all kinds of markup here - semantic tagging, etc -->
+        <div class="user-panel">
+            <div class="user-panel-header">
+                <img class="u-image"></img>
+                <h1 class="u-name"></h1>
+            </div>
+            <button class="user-button">More Details!</button>
+        </div>
+    </template>
+    </main>
+    <!-- end templates-->
+</body>
+
+</html>
