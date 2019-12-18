@@ -1,0 +1,166 @@
+#mainNav
+{
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#mainNav button
+{
+	background: url(../images/menu.svg);
+	width: 20px;
+	height: 20px;
+	border: 0;
+	transition: all 400ms ease;
+	margin-left: auto;
+	
+}
+
+#mainNav button.expanded
+{
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+#mainNav li a
+{
+	display: block;
+	padding: 10px 0 10px 0;
+	color: black;
+	text-align: center;
+}
+
+#mainNav li
+{
+	border-bottom: 1px dotted #efefef;
+}
+
+#mainNav li:first-child
+{
+	border-bottom: 1px dotted #efefef;
+}
+
+#mainNav li:last-child
+{
+	margin-bottom: 10px;
+}
+
+
+#mainNav button.expanded
+{
+  transform: rotate(90deg);
+}
+
+
+
+#mainNav li
+{
+  border-bottom: 1px solid #efefef;
+}
+
+#mainNav li:first-child
+{
+  border-top: 1px solid #efefef;
+}
+
+#mainNav li:last-child
+{
+  margin-bottom: 10px;
+}
+
+#burgerMenu
+{
+  margin-top: 20px;
+  display: none;
+  margin-bottom: 20px;
+}
+
+#burgerMenu.slideToggle
+{
+  display: block;
+}
+
+#sideLine
+{
+	display: none;
+}
+
+// TAB
+
+@media screen and (min-width: 768px) {
+    #mainNav 
+        {
+            font-size: 14px;
+			text-align: center;
+		}
+		
+		.home{
+			margin: -60px 0 -60px 0;
+
+		}
+    
+        #mainNav button
+        {
+            display: none;
+        }
+    
+        #burgerMenu
+        {
+            display: block;
+        }
+    
+        #mainNav li
+            {
+                display: inline;
+                margin-left: 25px;
+            }
+    
+            #mainNav li a 
+            {
+                display: inline;
+                padding: 5px 0 5px 0;
+                color: #6d6d6c;
+            }
+    
+    }
+
+
+
+
+
+// DESKTOP
+
+
+@media screen and (min-width: 1200px) {
+#mainNav 
+	{
+		font-size: 18px;
+
+		text-align: center;
+	}
+
+	#mainNav button
+	{
+		display: none;
+	}
+
+	#burgerMenu
+	{
+		display: block;
+	}
+
+	#mainNav li
+		{
+
+			display: inline;
+			margin-left: 25px;
+		}
+
+		#mainNav li a 
+		{
+			display: inline;
+			padding: 5px 0 5px 0;
+			color: #6d6d6c;
+		}
+
+}

@@ -1,33 +1,12 @@
-<section id="section1" class="panel">
-    <nav class="mainNav">
-        <ul id="expanded">
-        <a href="index.html">HOME</a>
-        <a href="portfolio.html">PORTFOLIO</a>
-        <a href="contact.html">CONATCT</a>
-        </ul>
-    </nav>
-        {{!-- <div class="bio-info">
-            {{!-- <h2 class="p-name">Portfolio</h2> --}}
-            {{!-- <p class="introText">I'M HARWINDER DAHELE <br> DESIGNER AND WEB DEVELOPER</p> --}}
-        </div> --}}
-</section>
-<section id="section3" class="panel">
-    <div class="mainImg">
-        {{#each people}}
-        <div class="user-panel">
-            <img src="images/{{image}}" alt="image" class="u-image">        
-            {{!-- <a href="{{ID}}" class="u-link">
-                See More Info
-            </a> --}}
-            <h1 class="u-name">
-                I'M <br> HARWINDER <br>DAHELE
-            </h1>
-            <h3 class="u-description">DESIGNER AND WEB DEVELOPER</h3>
-            <h1>{{Name}}</h1>
-            <h3>{{Category}}</h3>
-        </div>
-        {{/each}}       
+<main id="Container">
+<section id="mainImg">
+    <h2 class="hidden">Main Image</h2>
+    <div class="mainInfo">
+            <div class="mainText"><h1>I'M <br> HARWINDER <br> DAHELE</h1>
+            <h3 class="u-description">DESIGNER AND WEB DEVELOPER</h3></div>
+            <img src="images/harwinder.png" alt="logo" class="myImg">
     </div>
+</section>
     <section id="about" class="panel">
         <h2 class="heading">A LITTLE ABOUT ME</h2>
         <p class="bio">The things I like most to do in my regular basis is that
@@ -41,49 +20,64 @@
     </section>
     <section id="interest">
         <h2 class="interest">INTEREST</h2>
-        <img src="images/{{image}}" alt="image" class="u-image">
-        <h2 class="designHead">DESIGN</h2>
+        <div class="allIcons">
+        <div class="designIdea">
+            <img src="images/design.png" alt="design" class="icon">
+            <h2 class="designHead">DESIGN</h2>
             <p class="designDec">I prefer to make unique design which makes my skills advance.</p>
-
-            <img src="images/{{image}}" alt="image" class="u-image">
-        <h2 class="videoHead">VIDEO EDITING</h2>
+        </div>
+        <div class="editIdea">
+            <img src="images/editing.png" alt="video editing" class="icon">
+            <h2 class="videoHead">VIDEO EDITING</h2>
             <p class="videoDec">I like to edit videos on new ideas by using cinema 4D and after effects.</p>
-
-            <img src="images/{{image}}" alt="image" class="u-image">
-        <h2 class="codeHead">CODE</h2>
+        </div>
+        <div class="codeIdea">
+            <img src="images/coding.png" alt="code" class="icon">
+            <h2 class="codeHead">CODE</h2>
             <p class="codeDec">I like to do code for making different type of animation on web page.</p>
+        </div>
+        </div>
     </section>
-
 
     <section id="myWork">
         <h2 class="workHead">MY RECENT PROJECTS</h2>
+        <div class="projectImg">
+        {{#each people}}
+        <img src="images/{{image}}" alt="image" class="u-image">
+            <p class="introText"></p>
+        {{/each}}
+        </div>
     </section>
 
     <section id="reel">
         <h2 class="reel">SHOWREEL</h2>
+        <div class="videoInfo">
         <p class="reelDec">This is my show reel which shows my recent works which I have done. This video has made by using after effects and cinema 4D. </p>
-        <video class="video" src="video/video.mp4"></video>
+        <video class="video" src="video/video.mp4" controls></video>
+        </div>
     </section>
-{{!-- 
     <section id="contact">
-        <h2 class="contact">CONTACT</h2>
-        <label for="name">NAME:</label>
-        <input type="text" id="name" placeholder="Your Name.."><br>
-        <label for="email">EMAIL:</label>
-        <input type="text" id="email" placeholder="Your Email.."><br>
-        <label for="subject">SUBJECT:</label>
-        <input type="text" id="subject" placeholder="Subject"><br>
-        <label for="message">MESSAGE:</label>
-        <textarea name="message" id="message" placeholder="Type Your Message..."></textarea><br>
+        <h2 class="contactHead">CONTACT</h2>
+        <div class="map">
+        <div class="form">
+        <div ><label for="name">NAME:</label>
+        <input type="text" class="name" placeholder="Your Name.."><br></div>
+        <div><label for="email">EMAIL:</label>
+        <input type="text" class="email" placeholder="Your Email.."><br></div>
+        <div><label for="subject">SUBJECT:</label>
+        <input type="text" class="subject" placeholder="Subject"><br></div>
+        <div><label for="message">MESSAGE:</label>
+        <textarea name="message" class="message" placeholder="Type Your Message..."></textarea><br></div>
+        </div>
+        <iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.7516970610795!2d-81.25309404958107!3d42.983503903392396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef3779e9706c1%3A0x6b0cea8bf906455!2sFanshawe%20Downtown%20Campus!5e0!3m2!1sen!2sca!4v1576639059147!5m2!1sen!2sca" width="350" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
         <button class="submit">SUBMIT</button>
-    </section> --}}
-
-    <div class="socialMedia">
-        <img src="public/images/facebook.png" alt="Facebook">
-        <img src="public/images/instagram.png" alt="Instagram">
-        <img src="public/images/youtube.png" alt="Youtube">
-    </div>
-
+    </section>
+        <div class="socialIcon">
+        <img src="images/facebook.png" alt="Facebook" class="social">
+        <img src="images/instagram.png" alt="Instagram" class="social">
+        <img src="images/youtube.png" alt="Youtube" class="social">
+        </div>
     <footer id="allRights">All Rights Reseved@2019 by Harwinder</footer>
     <section class="lightbox">
         <span class="close">x</span>
@@ -94,3 +88,4 @@
         </div>
     </section>
 </section>
+</main>

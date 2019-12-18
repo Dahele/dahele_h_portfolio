@@ -1,202 +1,174 @@
 @import '_vars';
 @import 'modules/_navbar';
-@import 'modules/_users';
 @import 'modules/_lightbox';
 @import 'modules/errors'; // error page
 
 body {
     color: $main-color;
-    background-color:$body-bg;
-    font-family: Arimo;
-    margin: 0 auto;
+    background-color: $main-color;
+    font-family: 'Arimo', sans-serif;
 }
 
 .hidden{
     display: none;
+    
 }
 
-@media screen and (min-width: 535px){
-    .logo{
-        width:100px;
-        height:100px;
-        justify-content: left;
-     }
-
-    .user-panel{
-        text-align: center;
-        background-color: #9e0039;
-    }
-    
-    .u-image{
-        width: 250px;
-        height: 250px;
-        margin-top: 30px;
-    }
-    
-    .u-name{
-        color:white;
-        font-size:30px;
-        font-weight: bold;
-        left: 50%;
-    }
-    
-    .u-description{
-        color:#ffc600;
-        font-size:14px;
-        text-align: center;
-        margin-top: -10px;
-    }
-    
-    #about h2{
-        text-align: center;
-        font-size: 23px;
-        font-weight: bold;
-        margin-top: 20px;
-        color:#9e0039;
-    }
-    
-    
-    #about p{
-        text-align: center;
-        margin-left: 50px;
-        margin-right: 50px;
-        color: #9e0039;
-    }
-    
-
-
+#Container{ 
+    margin: 0 auto;
+    padding: 0;
 }
 
+//MOBLIE
 
-
-
-
-
-
-
-
-
+#mainLogo{
+    display: flex;
+    justify-content: center;
+}
 
 .logo{
-    width:100px;
-    height:100px;
-    margin-left: 50%;
-    margin-right: 50%;
+    width:50px;
+    height:50px;
+    margin: 5px 5px;
 }
 
-.user-panel{
-    text-align: center;
-    background-color: #9e0039;
-    height: 480px;
+#mainImg{
+    display: flex;
+    justify-content: center;
+    background-color: $background-color;
+    height: 370px;
 }
 
-.u-image{
-    width: 250px;
-    height: 250px;
-    align-items: center;
-    margin-top: 30px;
+.mainInfo{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.u-name{
-    color:white;
-    font-size:30px;
-    font-weight: bold;
-    left: 50%;
+.myImg{
+    width: 175px;
+}
+
+.mainText{
+    font-size: 18px;
 }
 
 .u-description{
     color:#ffc600;
-    font-size:14px;
+    font-size:11px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 #about h2{
     text-align: center;
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 20px;
-    color:#9e0039;
+    color:$text-color;
 }
 
 
 #about p{
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    color: #9e0039;
+    font-size: 12px;
+    margin: 0 50px 0 50px;
+    color: $text-color;
 }
 
 #interest{
     text-align: center;
-    background-color: #6dcff6;
+    background-color: $background-color1;
 }
 
 .interest{
     margin-top: 50px;
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
-    color: #9e0039;
+    color: $text-color;
     padding-top: 10px;
 }
 
+.icon{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    margin-top: 30px;
+    transition: transform .2s;
+}
+
+.icon:hover{
+    transform: scale(1.1);
+}
+
 .designHead{
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 20px;
-    color: white;
+    color: $color;
+}
+
+.designHead, .videoHead, .codeHead{
+    text-shadow: 2px 2px black;
 }
 
 .designDec{
+    font-size: 12px;
     margin-left: 50px;
     margin-right: 50px;
-    color: white;
+    color: $color;
 }
 
 .videoHead{
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 20px;
-    color: white;
+    color: $color;
 }
 
 .videoDec{
+    font-size: 12px;
     margin-left: 50px;
     margin-right: 50px;
-    color: white;
+    color: $color;
 }
 
 .codeHead{
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 20px;
-    color: white;
+    color: $color;
 }
 
 .codeDec{
+    font-size: 12px;
     margin-left: 50px;
     margin-right: 50px;
-    color: white;
+    color: $color;
     margin-bottom: 30px;
     padding-bottom: 10px;
 }
 
-#myWork{
-    text-align: center;
-}
-
 .workHead{
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
-    margin-top: 20px;
-    color: #9e0039;
+    text-align: center;
+    color: $text-color;
 }
 
-// RECENT PROJECT SPACE
+.projectImg{
+    display: flex;
+    flex-direction: column;
+}
 
+.u-image{
+    width: 250px;
+    height: 170px;
+    align-self: center;
+}
 
-
-
+.u-image:hover{
+    box-shadow: 5px 5px 5px grey;
+}
 
 
 #reel{
@@ -204,63 +176,653 @@ body {
 }
 
 .reel{
-    font-size: 23px;
+    font-size: 15px;
     font-weight: bold;
-    margin-top: 20px;
-    color: #9e0039;
+    margin-top: 10px;
+    color: $text-color;
 }
 
 .reelDec{
-    margin-left: 50px;
-    margin-right: 50px;
-    color: #9e0039;
-    margin-bottom: 30px;
+    font-size: 12px;
+    margin: 0 50px 0 50px;
+    color: $text-color;
 }
 
 .video{
     width: 250px;
-    height: 150px;
+    height: 200px;
 }
 
 #contact{
     text-align: center;
-    color: #9e0039;
+    color: $text-color;
     margin-top: 20px;
 }
 
-#name-field{
-    width: 200px;
-    height: 20px;
+.contactHead{
+    font-size: 15px;
+}
+
+.form{
+    font-size: 12px;
+}
+
+.name, .email{
+    font-size: 12px;
+    width: 150px;
+    height: 25px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.subject{
+    font-size: 12px;
+    width: 150px;
+    height: 25px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.message{
+    font-size: 12px;
+    width: 150px;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .submit{
-    color: white;
-    background-color: #9e0039;
-    width: 80px;
-    height: 40px;
+    font-size: 10px;
+    color: $color;
+    background-color: $button-color;
+    width: 50px;
+    height: 25px;
+    margin-left: 20px;
 }
 
-.socialMedia{
-    text-align: center;
-    margin: 20px;
+.googleMap{
+    display: none;
+}
+
+.socialIcon{
+    display: flex;
+    justify-content: center;
+}
+
+.social{
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px 10px 0;
+    align-content: center;
 }
 
 #allRights{
     color: #909090;
     text-align: center;
-    font-size: 23px;
-    background-color: #9e0039;
-    padding: 20px;
+    font-size: 8px;
+    background-color: $text-color;
+    padding: 10px;
 }
 
-// .panel { min-height: 80vh; }
-// .panel:nth-child(odd) {
-//     width:100%;
+// .error
+// {
+//     width:70%;
+//     margin-bottom: 30;
 // }
 
-.error
-{
-    width:70%;
-    margin-bottom: 30;
+// TAB
+
+ @media screen and (min-width: 768px) {
+
+    #mainLogo{
+        display: flex;
+    }
+
+    .logo{
+        width:80px;
+        height:80px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+
+    .mainInfo{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    #mainImg{
+        background-color: $background-color;
+        height: 330px;
+    }
+
+    .myImg{
+        width: 225px;
+        height: 225px;
+        padding: 50px 0 30px;
+    }
+    
+    .mainText{
+        font-size: 18px;
+        padding-top: 60px;
+        font-weight: bold;
+        text-align: left;
+        margin: 30px 150px 0 0px;
+    }
+
+    .u-description{
+        color:#ffc600;
+        font-size:13px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    #about h2{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color:$text-color;
+    }
+    
+    
+    #about p{
+        font-size: 14px;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $text-color;
+    }
+    
+
+    .allIcons{
+        display: flex;
+    }
+
+    #interest{
+        text-align: center;
+        background-color: $background-color1;
+    }
+    
+    .interest{
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        color: $text-color;
+        padding-top: 10px;
+    }
+    
+    .icon{
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        margin-top: 30px;
+        transition: transform .2s;
 }
+
+.icon:hover{
+    transform: scale(1.1);
+}
+
+    .designHead{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $color;
+    }
+
+    .designHead, .videoHead, .codeHead{
+        text-shadow: 2px 2px black;
+    }
+    
+    .designDec{
+        font-size: 14px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $color;
+    }
+    
+    .videoHead{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $color;
+    }
+    
+    .videoDec{
+        font-size: 14px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $color;
+    }
+    
+    .codeHead{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $color;
+    }
+    
+    .codeDec{
+        font-size: 14px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $color;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+
+    .workHead{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .projectImg{
+    display: flex;
+    flex-flow: row wrap;
+    // flex-wrap: wrap;
+    justify-content: space-around   ;
+    // flex-direction: row;
+    margin: 0 100px 0 180px;
+    }
+
+    .u-image{
+        width: 270px;
+        height: 180px;
+        align-self: center;
+        margin-bottom: 50px;
+    }
+
+    .videoInfo{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .reel{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $text-color;
+    }
+    
+    .reelDec{
+        font-size: 14px;
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $text-color;
+        margin-bottom: 30px;
+    }
+    
+    .video{
+        width: 300px;
+        height: 200px;
+        margin-right: 27px;
+        margin-top: -12px;
+    }
+
+    #contact{
+        color: $text-color;
+        margin-top: 20px;
+    }
+
+    .contactHead{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    
+    .form{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    
+    .name, .email{
+        width: 200px;
+        height: 30px;
+        margin-left: 76px;
+        margin-top: 10px;
+    }
+    
+    .subject{
+        width: 200px;
+        height: 30px;
+        margin-left: 54px;
+        margin-top: 10px;
+    }
+    
+    .message{
+        width: 200px;
+        height: 45px;
+        margin-left: 47px;
+        margin-top: 10px;
+    }
+    
+    .submit{
+        color: $color;
+        background-color: $button-color;
+        width: 80px;
+        height: 40px;
+        margin-left: -330px;
+        margin-top: 10px;   
+    }
+
+    .map{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .googleMap{
+        display: block;
+        width: 300px;
+        height: 200px;
+        margin-left: 30px;
+    }
+
+    .socialIcon{
+        display: flex;
+        justify-content: center;
+        margin-left: 570px;
+    }
+    
+    .social{
+        width: 40px;
+        height: 40px;
+    }
+
+    #allRights{
+        color: #909090;
+        text-align: center;
+        font-size: 12px;
+        background-color: $text-color;
+        padding: 10px;
+    }
+    
+
+ }
+
+
+ //DESKTOP
+
+@media screen and (min-width: 1200px) {
+    #mainLogo{
+        display: flex;
+        flex-direction: flex-start;
+    }
+
+    .logo{
+        width:80px;
+        height:80px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .mainInfo{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #mainImg{
+        background-color: $background-color;
+        height: 400px;
+    }
+
+    .myImg{
+        width: 300px;
+        height: 300px;
+        padding: 50px 0 30px;
+    }
+    
+    .mainText{
+        font-size: 22px;
+        padding-top: 60px;
+        font-weight: bold;
+        text-align: left;
+        margin: 30px 200px 0 0px;
+    }
+
+    .u-description{
+        color:#ffc600;
+        font-size:16px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    #about h2{
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color:$text-color;
+    }
+    
+    
+    #about p{
+        font-size: 16px;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $text-color;
+    }
+    
+
+    .allIcons{
+        display: flex;
+    }
+
+    #interest{
+        text-align: center;
+        background-color: $background-color1;
+    }
+    
+    .interest{
+        margin-top: 50px;
+        font-size: 22px;
+        font-weight: bold;
+        color: $text-color;
+        padding-top: 10px;
+    }
+    
+    .icon{
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        margin-top: 30px;
+        transition: transform .2s;
+    }
+    
+    .icon:hover{
+        transform: scale(1.1);
+    }
+    
+    .designHead{
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $color;
+    }
+
+    .designHead, .videoHead, .codeHead{
+        text-shadow: 2px 2px black;
+    }
+    
+    .designDec{
+        font-size: 16px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $color;
+    }
+    
+    .videoHead{
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $color;
+    }
+    
+    .videoDec{
+        font-size: 16px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $color;
+    }
+    
+    .codeHead{
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $color;
+    }
+    
+    .codeDec{
+        font-size: 16px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $color;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+
+    .workHead{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .projectImg{
+    display: flex;
+    flex-flow: row wrap;
+    // flex-wrap: wrap;
+    justify-content: space-evenly;
+    // flex-direction: row;
+    margin: 0 150px 0 300px;
+    }
+
+    .u-image{
+        width: 350px;
+        height: 250px;
+        align-self: center;
+        margin-bottom: 50px;
+    }
+
+    .videoInfo{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .reel{
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: $text-color;
+    }
+    
+    .reelDec{
+        font-size: 16px;
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: $text-color;
+        margin-bottom: 30px;
+    }
+    
+    .video{
+        width: 450px;
+        height: 200px;
+        margin-right: 50px;
+    }
+
+    #contact{
+        color: $text-color;
+        margin-top: 20px;
+    }
+
+    .contactHead{
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    
+    .form{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 16px;
+        margin-left: 100px;
+    }
+    
+    .name, .email{
+        width: 300px;
+        height: 30px;
+        margin-left: 80px;
+        margin-top: 10px;
+    }
+    
+    .subject{
+        width: 300px;
+        height: 30px;
+        margin-left: 54px;
+        margin-top: 10px;
+    }
+    
+    .message{
+        width: 300px;
+        height: 45px;
+        margin-left: 45px;
+        margin-top: 10px;
+    }
+    
+    .submit{
+        color: $color;
+        background-color: $button-color;
+        width: 80px;
+        height: 40px;
+        margin-left: -560px;
+        margin-top: 10px;   
+    }
+
+    .map{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .googleMap{
+        display: block;
+        width: 450px;
+        height: 300px;
+        margin-left: 60px;
+    }
+
+    .socialIcon{
+        display: flex;
+        justify-content: center;
+        margin-left: 800px;
+    }
+    
+    .social{
+        width: 50px;
+        height: 50px;
+        margin: 15px 15px 15px 0;
+    }
+
+    #allRights{
+        color: #909090;
+        text-align: center;
+        font-size: 14px;
+        background-color: $text-color;
+        padding: 10px;
+    }
+    
+
+ }
+
+
+
+
+
 @import 'modules/_footer'
