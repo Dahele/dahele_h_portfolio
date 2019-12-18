@@ -5,24 +5,22 @@ const sql = require('../utils/sql');
 
 router.get('/', (req, res) => {
     console.log('at the main route');
-    let query = "SELECT ID, name, image, description, heading, bio FROM tbl_homepage";
+    let query = "SELECT ID, name, image, description FROM tbl_portfolio_projects";
 
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
         console.log(result);
         res.render('home', { people: result });
-    })
+     })
 })
 
 router.get('/users/:id', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the user route');
     console.log(req.params.id) // 1, 2 3 or whatever comes after the slash
-
-    let query = `SELECT * FROM tbl_homepage WHERE ID="${req.params.id}"`;
+    let query = `SELECT * FROM tbl_portfolio_projects WHERE ID="${req.params.id}"`;
     sql.query(query, (err, result) => {
         if (err) { throw err; console.log(err); }
-
         console.log(result); // should see objects wrapped in an array
 
         //convert the social property into an array

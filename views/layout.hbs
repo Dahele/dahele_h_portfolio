@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Harwinder</title>
+    <title>Harwinder Dahele</title>
 </head>
 <main class="container">
-<body>   
-        <img src="images/logo.svg" alt="Logo" class="logo">
+<body>
+    <section id="mainLogo">
+        <img src="images/logo.svg" class="logo" alt="Logo">
+</section>
+    <nav id="mainNav">
+					<button id="button"></button>
+					<div id="burgerMenu">
+						<ul id="Menu">
+							<li><a href="index.html" class="home">HOME</a></li>
+							<li><a href="#" class="home">PORTFOLIO</a></li>
+							<li><a href="#" class="home">CONTACT</a></li>
+						</ul>
+					</div>
+				</nav>
+        
     <main>
         {{{ body }}}
     </main>
@@ -30,7 +44,7 @@
                 <img class="u-image"></img>
                 <h1 class="u-name"></h1>
             </div>
-            <button class="user-button">More Details!</button>
+            {{!-- <button class="user-button">More Details!</button> --}}
         </div>
     </template>
     </main>
